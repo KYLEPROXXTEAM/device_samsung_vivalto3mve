@@ -20,7 +20,7 @@
 
 # Platform
 TARGET_ARCH := arm
-TARGET_BOARD_PLATFORM := scx15
+TARGET_BOARD_PLATFORM := sc8830
 TARGET_BOARD_PLATFORM_GPU := mali-400 MP
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -95,7 +95,7 @@ BOARD_USE_SAMSUNG_COLORFORMAT := true
 COMMON_GLOBAL_CFLAGS += -DUSE_LEGACY_BLOBS
 
 # Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.scx15
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.sc8830
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -117,7 +117,7 @@ TARGET_NR_SVC_SUPP_GIDS := 24
 TARGET_PROVIDES_INIT_RC := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := vivalto3mve,SM-G318HL,SM-G318H
+TARGET_OTA_ASSERT_DEVICE := vivalto3mve,SM-G318HL,SM-G318H,vivalto3mveml3g
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/vivalto3mve/sepolicy
@@ -133,7 +133,7 @@ WITH_DEXPREOPT_PIC := true
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := device/samsung/vivalto3mve/rootdir/fstab.scx15
+TARGET_RECOVERY_FSTAB := device/samsung/vivalto3mve/rootdir/fstab.sc8830
 TARGET_RECOVERY_TWRP := true
 
 ifeq ($(TARGET_RECOVERY_TWRP),true)
