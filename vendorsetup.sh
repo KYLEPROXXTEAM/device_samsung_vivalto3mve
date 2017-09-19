@@ -25,6 +25,6 @@ for rom in aosp cm lineage hex
 do
   for targetBuildVariant in eng user userdebug
   do
-    add_lunch_combo ${rom}_young23g-${targetBuildVariant}
+    add_lunch_combo ${rom}_vivalto3mve-${targetBuildVariant}
   done
 done

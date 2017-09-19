@@ -14,11 +14,8 @@
 # limitations under the License.
 #
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/telephony.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common HEXAGON stuff.
+$(call inherit-product, vendor/hexagon/configs/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/vivalto3mve/device_vivalto3mve.mk)
@@ -33,7 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Device identifier
 PRODUCT_DEVICE := vivalto3mve
-PRODUCT_NAME := lineage_vivalto3mve
+PRODUCT_NAME := hexagon_vivalto3mve
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G318HZ
 PRODUCT_MANUFACTURER := samsung

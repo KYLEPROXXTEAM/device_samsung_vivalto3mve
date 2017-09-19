@@ -19,11 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/young23g/device_young23g.mk)
+$(call inherit-product, device/samsung/vivalto3mve/device_vivalto3mve.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-	device/samsung/young23g/overlay \
+	device/samsung/vivalto3mve/overlay \
 
 # Override build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -32,9 +32,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_PACKAGES += Launcher3
 
 # Device identifier
-PRODUCT_DEVICE := young23g
-PRODUCT_NAME := aosp_young23g
+PRODUCT_DEVICE := vivalto3mve
+PRODUCT_NAME := aosp_vivalto3mve
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G130HN
+PRODUCT_MODEL := SM-G318HZ
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := phone
