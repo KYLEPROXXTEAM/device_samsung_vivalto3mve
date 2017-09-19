@@ -1,4 +1,4 @@
-import init.young23g_base.rc
+import init.vivalto3mve_base.rc
 import init.wifi.rc
 
 # for BT-PANU

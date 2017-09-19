@@ -41,7 +41,7 @@ import java.util.Collections;
  *
  * {@hide}
  */
-public class young23gRIL extends SamsungSPRDRIL implements CommandsInterface {
+public class vivalto3mveRIL extends SamsungSPRDRIL implements CommandsInterface {
 
     public static class TelephonyPropertyProvider implements TelephonyManager.TelephonyPropertyProvider {
 
@@ -104,11 +104,11 @@ public class young23gRIL extends SamsungSPRDRIL implements CommandsInterface {
         }
     }
 
-    public young23gRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
+    public vivalto3mveRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
         this(context, preferredNetworkType, cdmaSubscription, null);
     }
 
-    public young23gRIL(Context context, int preferredNetworkType,
+    public vivalto3mveRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
