@@ -16,7 +16,7 @@
 -include device/samsung/sprd-common/BoardConfigCommon.mk
 
 # Inherit from the proprietary version
--include vendor/samsung/young23g/BoardConfigVendor.mk
+-include vendor/samsung/vivalto3mve/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm
@@ -45,12 +45,12 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/samsung/young23g/ril
+BOARD_RIL_CLASS += ../../../device/samsung/vivalto3mve/ril
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/young23g/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/young23g/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivalto3mve/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivalto3mve/bluetooth/libbt_vndcfg.txt
 
 # FM
 BOARD_HAVE_FMRADIO_BCM := true
@@ -95,7 +95,7 @@ BOARD_USE_SAMSUNG_COLORFORMAT := true
 COMMON_GLOBAL_CFLAGS += -DUSE_LEGACY_BLOBS
 
 # Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.sc8830
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.ss8830
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -109,22 +109,19 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
-TARGET_KERNEL_CONFIG := young23g-native_hw03_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/young23g
+TARGET_KERNEL_CONFIG := vivalto3mve-native_hw03_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/vivalto3mve
 
 # Init
 TARGET_NR_SVC_SUPP_GIDS := 24
 TARGET_PROVIDES_INIT_RC := true
 
 # Assert
-<<<<<<< HEAD
 TARGET_OTA_ASSERT_DEVICE := vivalto3mve,SM-G318HL,SM-G318H,vivalto3mveml3g
-=======
-TARGET_OTA_ASSERT_DEVICE := young23g,SM-G130H,SM-G130HN,vivalto3gvn,vivalto3gvndx,vivalto3gub,vivalto3g,SM-G313HZ,SM-G313H,SM-G313ML
->>>>>>> parent of 59a1dbb... First commit
+
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/young23g/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/vivalto3mve/sepolicy
 
 # Memory
 MALLOC_IMPL := dlmalloc
@@ -137,11 +134,7 @@ WITH_DEXPREOPT_PIC := true
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-<<<<<<< HEAD
 TARGET_RECOVERY_FSTAB := device/samsung/vivalto3mve/rootdir/fstab.sc8830
-=======
-TARGET_RECOVERY_FSTAB := device/samsung/young23g/rootdir/fstab.scx15
->>>>>>> parent of 59a1dbb... First commit
 TARGET_RECOVERY_TWRP := true
 
 ifeq ($(TARGET_RECOVERY_TWRP),true)
