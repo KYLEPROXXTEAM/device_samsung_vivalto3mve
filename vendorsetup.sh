@@ -21,7 +21,7 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-for rom in aosp cm lineage
+for rom in aosp cm lineage hex
 do
   for targetBuildVariant in eng user userdebug
   do
