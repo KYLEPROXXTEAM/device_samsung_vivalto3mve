@@ -93,6 +93,10 @@
     </Decoders>
 
     <Encoders>
+        <Include href="media_codecs_google_audio.xml" />
+        <Include href="media_codecs_google_video_le.xml" />
+        <Include href="media_codecs_google_telephony.xml" />
+        <Include href="media_codecs_ffmpeg.xml" />
         <MediaCodec name="OMX.sprd.mpeg4.encoder" type="video/mp4v-es" />
         <MediaCodec name="OMX.sprd.h263.encoder" type="video/3gpp" />
         <MediaCodec name="OMX.sprd.h264.encoder" type="video/avc"/>
