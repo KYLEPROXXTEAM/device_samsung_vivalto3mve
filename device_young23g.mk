@@ -25,7 +25,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 $(call inherit-product, device/samsung/sprd-common/common.mk)
 
 # Inherit from vendor
-$(call inherit-product, vendor/samsung/vivalto3mve/vivalto3mve-vendor.mk)
+$(call inherit-product, vendor/samsung/young23g/young23g-vendor.mk)
 
 # Dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
@@ -44,45 +44,45 @@ TARGET_SCREEN_WIDTH := 320
 
 # Rootdir files
 ROOTDIR_FILES := \
-	device/samsung/vivalto3mve/rootdir/init.rc \
-	device/samsung/vivalto3mve/rootdir/init.board.rc \
-	device/samsung/vivalto3mve/rootdir/init.scx15.rc \
-	device/samsung/vivalto3mve/rootdir/init.scx15.usb.rc \
-	device/samsung/vivalto3mve/rootdir/init.scx15_ss.rc \
-	device/samsung/vivalto3mve/rootdir/init.young23g.rc \
-	device/samsung/vivalto3mve/rootdir/init.young23g_base.rc \
-	device/samsung/vivalto3mve/rootdir/init.wifi.rc \
-	device/samsung/vivalto3mve/rootdir/init.swap.rc \
-	device/samsung/vivalto3mve/rootdir/ueventd.scx15.rc \
-	device/samsung/vivalto3mve/rootdir/fstab.scx15 \
+	device/samsung/young23g/rootdir/init.rc \
+	device/samsung/young23g/rootdir/init.board.rc \
+	device/samsung/young23g/rootdir/init.scx15.rc \
+	device/samsung/young23g/rootdir/init.scx15.usb.rc \
+	device/samsung/young23g/rootdir/init.scx15_ss.rc \
+	device/samsung/young23g/rootdir/init.young23g.rc \
+	device/samsung/young23g/rootdir/init.young23g_base.rc \
+	device/samsung/young23g/rootdir/init.wifi.rc \
+	device/samsung/young23g/rootdir/init.swap.rc \
+	device/samsung/young23g/rootdir/ueventd.scx15.rc \
+	device/samsung/young23g/rootdir/fstab.scx15 \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(ROOTDIR_FILES),$(f):root/$(notdir $(f)))
 
 # Recovery
 PRODUCT_COPY_FILES += \
-	device/samsung/vivalto3mve/rootdir/init.recovery.scx15.rc:root/init.recovery.scx15.rc \
-	device/samsung/vivalto3mve/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
+	device/samsung/young23g/rootdir/init.recovery.scx15.rc:root/init.recovery.scx15.rc \
+	device/samsung/young23g/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
 
 # Keylayouts
 KEYLAYOUT_FILES := \
-	device/samsung/vivalto3mve/keylayouts/ist30xx_ts_input.kl \
-	device/samsung/vivalto3mve/keylayouts/sci-keypad.kl
+	device/samsung/young23g/keylayouts/ist30xx_ts_input.kl \
+	device/samsung/young23g/keylayouts/sci-keypad.kl
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(KEYLAYOUT_FILES),$(f):system/usr/keylayout/$(notdir $(f)))
 
 # Bluetooth config
 BLUETOOTH_CONFIGS := \
-	device/samsung/vivalto3mve/configs/bluetooth/bt_vendor.conf
+	device/samsung/young23g/configs/bluetooth/bt_vendor.conf
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(BLUETOOTH_CONFIGS),$(f):system/etc/bluetooth/$(notdir $(f)))
 
 # Media config
 MEDIA_CONFIGS := \
-	device/samsung/vivalto3mve/media/media_codecs.xml \
-	device/samsung/vivalto3mve/media/media_profiles.xml \
+	device/samsung/young23g/media/media_codecs.xml \
+	device/samsung/young23g/media/media_profiles.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml
@@ -126,11 +126,11 @@ PRODUCT_PACKAGES += \
 	libatchannel_wrapper \
 
 AUDIO_CONFIGS := \
-	device/samsung/vivalto3mve/configs/audio/audio_policy.conf \
-	device/samsung/vivalto3mve/configs/audio/audio_hw.xml \
-	device/samsung/vivalto3mve/configs/audio/audio_para \
-	device/samsung/vivalto3mve/configs/audio/codec_pga.xml \
-	device/samsung/vivalto3mve/configs/audio/tiny_hw.xml \
+	device/samsung/young23g/configs/audio/audio_policy.conf \
+	device/samsung/young23g/configs/audio/audio_hw.xml \
+	device/samsung/young23g/configs/audio/audio_para \
+	device/samsung/young23g/configs/audio/codec_pga.xml \
+	device/samsung/young23g/configs/audio/tiny_hw.xml \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(AUDIO_CONFIGS),$(f):system/etc/$(notdir $(f))) \
@@ -146,23 +146,23 @@ PRODUCT_PACKAGES += \
 
 # GPS
 GPS_CONFIGS := \
-	device/samsung/vivalto3mve/configs/gps/gps.xml \
+	device/samsung/young23g/configs/gps/gps.xml \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(GPS_CONFIGS),$(f):system/etc/$(notdir $(f)))
 
 # Nvitem
 NVITEM_CONFIGS := \
-	device/samsung/vivalto3mve/configs/nvitem/nvitem_td.cfg \
-	device/samsung/vivalto3mve/configs/nvitem/nvitem_w.cfg
+	device/samsung/young23g/configs/nvitem/nvitem_td.cfg \
+	device/samsung/young23g/configs/nvitem/nvitem_w.cfg
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(NVITEM_CONFIGS),$(f):system/etc/$(notdir $(f)))
 
 # Wifi
 WIFI_CONFIGS := \
-	device/samsung/vivalto3mve/configs/wifi/wpa_supplicant.conf \
-	device/samsung/vivalto3mve/configs/wifi/nvram_net.txt \
+	device/samsung/young23g/configs/wifi/wpa_supplicant.conf \
+	device/samsung/young23g/configs/wifi/nvram_net.txt \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(WIFI_CONFIGS),$(f):system/etc/wifi/$(notdir $(f)))
@@ -204,12 +204,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.image-dex2oat-Xms=48m \
 	dalvik.vm.image-dex2oat-Xmx=48m \
 	dalvik.vm.image-dex2oat-filter=everything
-	
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_vivalto3mve
-PRODUCT_DEVICE := vivalto3mve
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-G318HZ

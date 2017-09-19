@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/aosp_vivalto3mve.mk
+	$(LOCAL_DIR)/aosp_young23g.mk
